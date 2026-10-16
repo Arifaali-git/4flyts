@@ -43,6 +43,16 @@ a{text-decoration:none}
 @keyframes slide{to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
 .ticker{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 26px}
+/* custom cursor (desktop mouse only) */
+@media (hover:hover) and (pointer:fine){
+  body.has-cursor, body.has-cursor a, body.has-cursor button{cursor:none}
+  .cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;opacity:0;transition:opacity .3s}
+  .cur-dot{width:8px;height:8px;margin:-4px 0 0 -4px;background:#FF8C1A}
+  .cur-ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid #1E5AA8;transition:width .25s,height .25s,margin .25s,background .25s,border-color .25s,opacity .3s}
+  .cur-ring.big{width:70px;height:70px;margin:-35px 0 0 -35px;background:rgba(255,140,26,.18);border-color:#FF8C1A}
+  .cur-on .cur-dot,.cur-on .cur-ring{opacity:1}
+  .dest{transform-style:preserve-3d;will-change:transform}
+}
 </style>
 
 </head>
@@ -207,5 +217,24 @@ a{text-decoration:none}
 </body>
 </html>
 
+<script>
+(function(){
+  if(!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+  var d=document.createElement('div'),r=document.createElement('div');
+  d.className='cur-dot';r.className='cur-ring';document.body.append(d,r);
+  document.body.classList.add('has-cursor');
+  var x=0,y=0,rx=0,ry=0;
+  addEventListener('mousemove',function(e){x=e.clientX;y=e.clientY;document.body.classList.add('cur-on');
+    d.style.transform='translate('+x+'px,'+y+'px)';});
+  document.addEventListener('mouseleave',function(){document.body.classList.remove('cur-on')});
+  (function loop(){rx+=(x-rx)*.16;ry+=(y-ry)*.16;r.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(loop)})();
+  document.addEventListener('mouseover',function(e){r.classList.toggle('big',!!e.target.closest('a,button'))});
+  document.querySelectorAll('.dest').forEach(function(c){
+    c.addEventListener('mousemove',function(e){var b=c.getBoundingClientRect(),px=(e.clientX-b.left)/b.width-.5,py=(e.clientY-b.top)/b.height-.5;
+      c.style.transform='perspective(800px) rotateY('+px*10+'deg) rotateX('+(-py*10)+'deg) translateY(-6px)'});
+    c.addEventListener('mouseleave',function(){c.style.transform=''});
+  });
+})();
+</script>
 </body>
 </html>
