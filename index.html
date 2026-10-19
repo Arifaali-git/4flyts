@@ -4,244 +4,440 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Four Flights Travel &amp; Tours | Kulhudhuffushi, Maldives</title>
-<meta name="description" content="Flight tickets, tour packages and travel bookings from a local team in Kulhudhuffushi, Maldives.">
-
+<meta name="description" content="Flight tickets, tour packages and hotel bookings from a local team in Kulhudhuffushi, Maldives. Tell us where and when, and we handle the rest.">
+<meta name="theme-color" content="#A8D4E5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Montserrat:wght@500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Montserrat:wght@700&amp;display=swap">
 <style>
-body{margin:0;font-family:'DM Sans',system-ui,sans-serif;color:#111418;background:#A8D4E5}
-a{text-decoration:none}
-.btn-dark:hover{filter:brightness(1.25)}
-.btn-light:hover{background:#ffffff}
-.lift:hover{transform:translateY(-6px)}
-.nav-link:hover{color:#FF8C1A}
-.eyebrow{display:flex;align-items:center;gap:14px}
-.eyebrow:before{content:'';width:36px;height:1px;background:#1E5AA8;display:block}
-.serif{font-family:'Cormorant Garamond',Georgia,serif}
+:root{--sky:#A8D4E5;--sky-lt:#C6E5F0;--blue:#1E5AA8;--navy:#0F2A4A;--orange:#FF8C1A;--ink:#111418;--white:#fff;--serif:'Fraunces',Georgia,serif}
+*{box-sizing:border-box}
+html{background:linear-gradient(180deg,var(--sky-lt) 0%,var(--sky) 100%) fixed;scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.6 'DM Sans',system-ui,sans-serif;color:var(--ink);background:transparent}
+a{color:inherit;text-decoration:none}
+img{display:block}
+h1,h2,h3{margin:0}
+h1,h2{font-family:var(--serif);font-weight:500;letter-spacing:-.018em;line-height:1.04}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
 
-.dest-grid{perspective:1200px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.dest{position:relative;display:block;aspect-ratio:3/4;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 14px 30px rgba(30,90,168,0.15);transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
-.dest img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.dest-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.62) 100%);transition:opacity .4s}
-.dest-label{position:absolute;left:22px;right:22px;bottom:20px;color:#fff;display:flex;flex-direction:column;gap:6px;transition:transform .45s}
-.dest-go{font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:.24em;font-weight:600;color:#FF8C1A;opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s}
-.dest:hover{transform:perspective(900px) rotateX(3deg) rotateY(-3deg) translateY(-8px);box-shadow:0 28px 50px rgba(30,90,168,0.32)}
-.dest:hover img{transform:scale(1.12)}
-.dest:hover .dest-label{transform:translateY(-4px)}
-.dest:hover .dest-go{opacity:1;transform:none}
-.btn-dark,.btn-light{transition:transform .25s,background .25s,filter .25s}
-.btn-dark:hover,.btn-light:hover{transform:translateY(-3px)}
-.nav-link{position:relative}
-.nav-link:after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:#FF8C1A;transition:width .3s}
+/* watermark */
+.wm{position:fixed;inset:0;z-index:-1;display:flex;align-items:center;justify-content:center;opacity:.14;pointer-events:none}
+.wm svg{width:min(78vw,680px);height:auto}
+
+/* nav */
+.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:26px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand b{font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;letter-spacing:.28em}
+.nav-r{display:flex;flex-wrap:wrap;align-items:center;gap:26px}
+.nav-link{position:relative;font-weight:500;font-size:15px}
+.nav-link:after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--orange);transition:width .3s}
 .nav-link:hover:after{width:100%}
-@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
-@supports (animation-timeline:view()){.reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 45%}}
-@media (prefers-reduced-motion:reduce){.reveal{animation:none}.dest,.dest img{transition:none}}
-.marquee{overflow:hidden;white-space:nowrap}
-.marquee-track{display:inline-flex;gap:26px;padding-right:26px;animation:slide 28s linear infinite}
-.marquee:hover .marquee-track{animation-play-state:paused}
-@keyframes slide{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
-.ticker{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 26px}
-/* custom cursor (desktop mouse only) */
-@media (hover:hover) and (pointer:fine){
-  body.has-cursor, body.has-cursor a, body.has-cursor button{cursor:none}
-  .cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;opacity:0;transition:opacity .3s}
-  .cur-dot{width:8px;height:8px;margin:-4px 0 0 -4px;background:#FF8C1A}
-  .cur-ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid #1E5AA8;transition:width .25s,height .25s,margin .25s,background .25s,border-color .25s,opacity .3s}
-  .cur-ring.big{width:70px;height:70px;margin:-35px 0 0 -35px;background:rgba(255,140,26,.18);border-color:#FF8C1A}
-  .cur-on .cur-dot,.cur-on .cur-ring{opacity:1}
-  .dest{transform-style:preserve-3d;will-change:transform}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;font:700 15px/1 'DM Sans',sans-serif;padding:16px 28px;cursor:pointer;transition:transform .25s,filter .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{filter:brightness(1.18)}
+.btn-orange{background:var(--orange);color:var(--ink)}
+.btn-orange:hover{filter:brightness(1.07)}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+/* hero */
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:center;gap:32px;padding:40px 0 52px}
+.hero h1{font-size:clamp(42px,6.4vw,86px);max-width:12.5em}
+.hero p{margin:26px 0 0;font-size:20px;line-height:1.55;color:var(--navy);max-width:30em}
+.hero-path{width:100%;height:auto;overflow:visible}
+
+/* ticket (booking + contact) */
+.ticket-wrap{filter:drop-shadow(0 20px 26px rgba(30,90,168,.26));animation:land .9s cubic-bezier(.2,.8,.2,1) .1s both}
+.ticket{--r:16px;--s:300px;--sh:340px;display:grid;grid-template-columns:minmax(0,1fr) var(--s);background:var(--white);border-radius:24px;overflow:hidden;
+-webkit-mask:radial-gradient(circle var(--r) at calc(100% - var(--s)) 0,#0000 calc(var(--r) - .5px),#000 var(--r)),radial-gradient(circle var(--r) at calc(100% - var(--s)) 100%,#0000 calc(var(--r) - .5px),#000 var(--r));
+-webkit-mask-composite:source-in;
+mask:radial-gradient(circle var(--r) at calc(100% - var(--s)) 0,#0000 calc(var(--r) - .5px),#000 var(--r)),radial-gradient(circle var(--r) at calc(100% - var(--s)) 100%,#0000 calc(var(--r) - .5px),#000 var(--r));
+mask-composite:intersect}
+.tk-main{padding:34px 36px 30px}
+.tk-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;margin-bottom:24px}
+.tk-head h2{font-size:34px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;border:0;margin:0;padding:0}
+.chips label{position:relative}
+.chips input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chips span{display:block;padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px;background:#EAF3F9;color:var(--navy);transition:background .2s,color .2s}
+.chips input:checked+span{background:var(--blue);color:#fff}
+.chips input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.fields{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.f{display:flex;flex-direction:column;gap:6px;min-width:0}
+.f label{font-size:13px;font-weight:700;color:var(--blue)}
+.f input,.f select{width:100%;font:500 17px/1.2 'DM Sans',sans-serif;color:var(--ink);background:#F4F9FC;border:1.5px solid #D5E6F0;border-radius:12px;padding:13px 14px;transition:border-color .2s,box-shadow .2s,background .2s}
+.f input:hover,.f select:hover{border-color:#9CC4DB}
+.f input:focus,.f select:focus{outline:0;border-color:var(--blue);background:#fff;box-shadow:0 0 0 4px rgba(30,90,168,.16)}
+.f.big input{font:500 24px/1.15 var(--serif);padding:14px 16px}
+.c2{grid-column:span 2}.c3{grid-column:span 3}
+.swaprow{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;align-items:end}
+.swap{width:46px;height:46px;border-radius:50%;border:1.5px solid #D5E6F0;background:#fff;color:var(--blue);display:grid;place-items:center;cursor:pointer;margin-bottom:2px;transition:transform .35s,background .2s,color .2s}
+.swap:hover{background:var(--blue);color:#fff;transform:rotate(180deg)}
+.status{min-height:24px;margin:18px 0 0;font-size:15px;font-weight:500;color:var(--navy)}
+.status.err{color:#B3261E}
+.tk-stub{position:relative;background:var(--blue);color:#fff;padding:34px 30px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.tk-stub:before{content:'';position:absolute;left:0;top:26px;bottom:26px;border-left:2px dashed rgba(255,255,255,.55)}
+.stub-t{font-family:var(--serif);font-size:26px;line-height:1.15;font-weight:500}
+.stub-s{margin:0;font-size:14px;line-height:1.45;color:#CFE3F4}
+.barcode{flex:none;height:46px;border-radius:3px;opacity:.9;background:repeating-linear-gradient(90deg,#fff 0 2px,transparent 2px 5px,#fff 5px 6px,transparent 6px 9px,#fff 9px 12px,transparent 12px 14px,#fff 14px 15px,transparent 15px 19px)}
+.tk-stub .btn{width:100%;padding:15px 18px}
+
+/* trust strip */
+.strip{display:flex;flex-wrap:wrap;gap:10px 34px;padding:26px 0 8px;font-size:15px;font-weight:500;color:var(--navy)}
+.strip a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(15,42,74,.35)}
+.strip a:hover{text-decoration-color:var(--orange)}
+
+/* sections */
+.sec{padding:84px 0 8px}
+.sec h2{font-size:clamp(34px,4.6vw,56px);max-width:15em}
+.sec .lead{margin:16px 0 0;font-size:18px;color:var(--navy);max-width:34em}
+
+/* routes */
+.routes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-top:40px;perspective:1200px}
+.route-w{filter:drop-shadow(0 14px 18px rgba(30,90,168,.22));transition:transform .45s cubic-bezier(.2,.7,.2,1),filter .45s;will-change:transform}
+.route-w:hover{filter:drop-shadow(0 24px 28px rgba(30,90,168,.32))}
+.route{--r:13px;--ph:224px;display:block;width:100%;padding:0;border:0;text-align:left;font:inherit;color:inherit;background:var(--white);border-radius:22px;overflow:hidden;cursor:pointer;
+-webkit-mask:radial-gradient(circle var(--r) at 0 var(--ph),#0000 calc(var(--r) - .5px),#000 var(--r)),radial-gradient(circle var(--r) at 100% var(--ph),#0000 calc(var(--r) - .5px),#000 var(--r));
+-webkit-mask-composite:source-in;
+mask:radial-gradient(circle var(--r) at 0 var(--ph),#0000 calc(var(--r) - .5px),#000 var(--r)),radial-gradient(circle var(--r) at 100% var(--ph),#0000 calc(var(--r) - .5px),#000 var(--r));
+mask-composite:intersect}
+.route-ph{display:block;height:var(--ph);overflow:hidden;background:#BFDCEA}
+.route-ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.route:hover .route-ph img{transform:scale(1.08)}
+.route-b{position:relative;display:block;padding:22px 24px 22px}
+.route-b:before{content:'';position:absolute;left:20px;right:20px;top:0;border-top:2px dashed #CFE3F0}
+.route-city{display:block;font-family:var(--serif);font-size:30px;line-height:1.1;font-weight:500}
+.route-co{display:block;margin-top:2px;font-size:15px;color:#4A6784}
+.route-line{display:flex;align-items:center;gap:10px;margin:16px 0 16px;font-weight:700;font-size:15px;letter-spacing:.14em;color:var(--navy)}
+.route-line i{flex:1;border-top:2px dashed #B5D3E4}
+.route-line svg{flex:none;color:var(--orange)}
+.route-cta{display:inline-block;font-weight:700;font-size:15px;color:var(--blue);padding-bottom:2px;border-bottom:2px solid var(--orange)}
+
+/* services */
+.svc{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
+.svc-list{list-style:none;margin:0;padding:8px 32px;background:var(--white);border-radius:24px;box-shadow:0 14px 26px rgba(30,90,168,.14)}
+.svc-list li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:22px;padding:26px 0}
+.svc-list li+li{border-top:2px dashed #D5E6F0}
+.svc-list h3{font-family:var(--serif);font-weight:500;font-size:26px;line-height:1.15;letter-spacing:-.01em}
+.svc-list p{margin:6px 0 0;color:#2A4468}
+
+/* steps */
+.steps{list-style:none;position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;margin:44px 0 0;padding:0}
+.steps:before{content:'';position:absolute;top:25px;left:25px;right:25px;border-top:3px dashed rgba(255,255,255,.95)}
+.dot{position:relative;width:50px;height:50px;border-radius:50%;background:var(--orange);color:var(--ink);display:grid;place-items:center;font:700 20px/1 'DM Sans',sans-serif;box-shadow:0 8px 18px rgba(30,90,168,.22)}
+.steps h3{margin:18px 0 6px;font-family:var(--serif);font-weight:500;font-size:26px;letter-spacing:-.01em}
+.steps p{margin:0;color:var(--navy);max-width:20em}
+
+/* contact */
+.contact{padding:84px 0 88px}
+.ct-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:4px}
+.ct-list li>a,.ct-list li>div{display:grid;grid-template-columns:34px minmax(0,1fr);gap:16px;align-items:center;padding:12px 0}
+.ct-list svg{color:var(--blue)}
+.ct-list small{display:block;font-size:13px;font-weight:700;color:var(--blue)}
+.ct-list span{font-weight:500;font-size:18px;overflow-wrap:anywhere}
+.ct-list a:hover span{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--orange)}
+.ct-main h2{font-size:clamp(32px,4vw,46px)}
+.ct-main p{margin:12px 0 0;color:var(--navy);max-width:30em}
+
+/* footer */
+.foot{background:var(--ink);color:#C9D4E5;border-top:4px solid var(--orange)}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;justify-content:space-between;padding-top:34px;padding-bottom:34px;font-size:14px}
+.foot b{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.28em;color:#fff}
+.foot a{text-decoration:underline;text-underline-offset:3px}
+
+@keyframes land{from{opacity:0;transform:translateY(38px) rotate(-1.4deg)}to{opacity:1;transform:none}}
+
+/* tablet and phone */
+@media (max-width:900px){
+.hero{grid-template-columns:1fr;padding-bottom:36px}
+.hero-path{display:none}
+.ticket{grid-template-columns:1fr;grid-template-rows:auto var(--sh);
+-webkit-mask:radial-gradient(circle var(--r) at 0 calc(100% - var(--sh)),#0000 calc(var(--r) - .5px),#000 var(--r)),radial-gradient(circle var(--r) at 100% calc(100% - var(--sh)),#0000 calc(var(--r) - .5px),#000 var(--r));
+-webkit-mask-composite:source-in;
+mask:radial-gradient(circle var(--r) at 0 calc(100% - var(--sh)),#0000 calc(var(--r) - .5px),#000 var(--r)),radial-gradient(circle var(--r) at 100% calc(100% - var(--sh)),#0000 calc(var(--r) - .5px),#000 var(--r));
+mask-composite:intersect}
+.tk-stub{padding:26px 28px}
+.tk-stub:before{left:26px;right:26px;top:0;bottom:auto;border-left:0;border-top:2px dashed rgba(255,255,255,.55)}
+.svc{grid-template-columns:1fr;gap:28px}
+.steps{grid-template-columns:1fr;gap:30px}
+.steps:before{top:25px;bottom:60px;left:24px;right:auto;border-top:0;border-left:3px dashed rgba(255,255,255,.95)}
+.steps li{display:grid;grid-template-columns:50px minmax(0,1fr);column-gap:18px}
+.steps h3{margin:10px 0 4px}
+.steps .dot{grid-row:span 2}
+.contact .ticket{--sh:200px}
 }
-html{background:linear-gradient(180deg,#C6E5F0 0%,#A8D4E5 100%) fixed}body{background:transparent!important}.wm{position:fixed;inset:0;z-index:-1;display:flex;align-items:center;justify-content:center;opacity:.14;pointer-events:none}.wm svg{width:min(78vw,680px);height:auto}
+@media (max-width:560px){
+.wrap{padding:0 18px}
+.nav-link{display:none}
+.tk-main{padding:26px 20px 22px}
+.tk-head h2{font-size:28px}
+.fields{gap:14px}
+.c2,.c3{grid-column:1/-1}
+.c2.half{grid-column:span 3}
+.swaprow{grid-template-columns:1fr;gap:10px}
+.swap{justify-self:center;margin:-2px 0}
+.f.big input{font-size:22px}
+.svc-list{padding:4px 22px}
+.svc-list li{grid-template-columns:36px minmax(0,1fr);gap:16px}
+.sec{padding-top:64px}
+.hero p{font-size:18px}
+}
+
+/* custom cursor (mouse only) */
+@media (hover:hover) and (pointer:fine){
+body.has-cursor,body.has-cursor a,body.has-cursor button{cursor:none}
+.cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;opacity:0;transition:opacity .3s}
+.cur-dot{width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--orange)}
+.cur-ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid var(--blue);transition:width .25s,height .25s,margin .25s,background .25s,border-color .25s,opacity .3s}
+.cur-ring.big{width:70px;height:70px;margin:-35px 0 0 -35px;background:rgba(255,140,26,.18);border-color:var(--orange)}
+.cur-on .cur-dot,.cur-on .cur-ring{opacity:1}
+.route-w{transform-style:preserve-3d}
+}
+@media (prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+.ticket-wrap{animation:none}
+.route-w,.route-ph img,.btn,.swap{transition:none}
+}
 </style>
-
 </head>
-<body><div class="wm"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="none"><g stroke="#fff" stroke-width="3.2" stroke-dasharray="9 7" stroke-linecap="round" opacity=".95"><path d="M172 222C200 150 245 105 272 78"/><path d="M272 80C285 90 285 140 280 168"/><path d="M188 243H312"/><path d="M281 205V300"/><path d="M170 252C150 270 165 292 205 290C245 288 272 262 281 205"/></g><g id="wp"><path d="M0 0L-46 8L-24 17Z"/><path d="M-24 17L-46 8L-30 36Z" opacity=".72"/></g><g fill="#FF8C1A"><use href="#wp" transform="translate(305 52) rotate(-24) scale(1.3)"/><use href="#wp" transform="translate(322 158) rotate(-24) scale(1.3)"/></g><g fill="#1E5AA8"><use href="#wp" transform="translate(207 224) rotate(-24) scale(-1 1) translate(46 0)"/><use href="#wp" transform="translate(308 292) rotate(-24) scale(1.3)"/></g><text x="240" y="366" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-size="30" font-weight="500" letter-spacing="7" fill="#111418">FOUR FLIGHTS</text><path d="M226 381H254" stroke="#111418" stroke-width="1.3"/><text x="240" y="402" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-size="12" letter-spacing="3.5" fill="#111418">KEEP MOVING FORWARD</text></svg></div>
+<body>
+<a class="skip" href="#book">Skip to the booking form</a>
+<div class="wm"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="none"><g stroke="#fff" stroke-width="3.2" stroke-dasharray="9 7" stroke-linecap="round" opacity=".95"><path d="M172 222C200 150 245 105 272 78"/><path d="M272 80C285 90 285 140 280 168"/><path d="M188 243H312"/><path d="M281 205V300"/><path d="M170 252C150 270 165 292 205 290C245 288 272 262 281 205"/></g><g id="wp"><path d="M0 0L-46 8L-24 17Z"/><path d="M-24 17L-46 8L-30 36Z" opacity=".72"/></g><g fill="#FF8C1A"><use href="#wp" transform="translate(305 52) rotate(-24) scale(1.3)"/><use href="#wp" transform="translate(322 158) rotate(-24) scale(1.3)"/></g><g fill="#1E5AA8"><use href="#wp" transform="translate(207 224) rotate(-24) scale(-1 1) translate(46 0)"/><use href="#wp" transform="translate(308 292) rotate(-24) scale(1.3)"/></g><text x="240" y="366" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-size="30" font-weight="500" letter-spacing="7" fill="#111418">FOUR FLIGHTS</text><path d="M226 381H254" stroke="#111418" stroke-width="1.3"/><text x="240" y="402" text-anchor="middle" font-family="DM Sans,Arial,sans-serif" font-size="12" letter-spacing="3.5" fill="#111418">KEEP MOVING FORWARD</text></svg></div>
 
+<div class="wrap">
+<nav class="nav" aria-label="Main">
+<a class="brand" href="#top" aria-label="Four Flights home">
+<svg width="34" height="34" viewBox="0 0 34 34" role="img" aria-label="Four Flights paper plane mark"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="#FF8C1A" stroke="#FF8C1A" stroke-width="1.5" stroke-linejoin="round"></path><path d="M16 20 L31 3" stroke="#B85E00" stroke-width="1.5" fill="none"></path></svg>
+<b>FOUR FLIGHTS</b>
+</a>
+<div class="nav-r">
+<a class="nav-link" href="#routes">Destinations</a>
+<a class="nav-link" href="#services">Services</a>
+<a class="nav-link" href="#how">How it works</a>
+<a class="nav-link" href="#contact">Contact</a>
+<a class="btn btn-blue" href="tel:+9609472945" style="padding:13px 22px">Call +960 947 2945</a>
+</div>
+</nav>
 
-<div style="color:#111418;font-family:'DM Sans',system-ui,sans-serif">
+<header class="hero" id="top">
+<div>
+<h1>Your flight ticket, booked by people you can call.</h1>
+<p>Tell us where and when you want to travel. We find the fare, book the seat and send you the ticket, all from our office in Kulhudhuffushi.</p>
+</div>
+<svg class="hero-path" viewBox="0 0 440 300" aria-hidden="true">
+<path d="M8 276 C 130 268 150 96 300 82 S 400 44 412 30" fill="none" stroke="#fff" stroke-width="3.5" stroke-dasharray="2 11" stroke-linecap="round"/>
+<g transform="translate(386 -6) rotate(-6) scale(1.15)"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="#FF8C1A" stroke="#FF8C1A" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 20 L31 3" stroke="#B85E00" stroke-width="1.5" fill="none"/></g>
+<circle cx="8" cy="276" r="7" fill="#1E5AA8"/>
+</svg>
+</header>
 
-<!-- HERO -->
-<div style="max-width:1200px;margin:0 auto;padding:0 24px;box-sizing:border-box">
+<section id="book" aria-labelledby="book-h">
+<div class="ticket-wrap">
+<form class="ticket" id="tf" novalidate>
+<div class="tk-main">
+<div class="tk-head">
+<h2 id="book-h">Request a ticket</h2>
+<fieldset class="chips">
+<legend class="sr" style="position:absolute;left:-999px">What do you need?</legend>
+<label><input type="radio" name="svc" value="Flight ticket" checked><span>Flight ticket</span></label>
+<label><input type="radio" name="svc" value="Tour package"><span>Tour package</span></label>
+<label><input type="radio" name="svc" value="Hotel stay"><span>Hotel stay</span></label>
+</fieldset>
+</div>
+<div class="fields">
+<div class="swaprow">
+<div class="f big"><label for="from">From</label><input id="from" name="from" value="Malé (MLE)" autocomplete="off"></div>
+<button class="swap" type="button" id="swap" aria-label="Swap From and To"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13l-3.5-3.5M17 13H4l3.5 3.5"/></svg></button>
+<div class="f big"><label for="to">To</label><input id="to" name="to" list="places" placeholder="Where to?" autocomplete="off" required></div>
+</div>
+<div class="f c2"><label for="dep">Leaving</label><input id="dep" name="dep" type="date"></div>
+<div class="f c2"><label for="ret">Returning (optional)</label><input id="ret" name="ret" type="date"></div>
+<div class="f c2"><label for="pax">Travellers</label><select id="pax" name="pax"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div>
+<div class="f c3"><label for="nm">Your name</label><input id="nm" name="nm" autocomplete="name"></div>
+<div class="f c3"><label for="ct">Phone or Telegram</label><input id="ct" name="ct" autocomplete="tel"></div>
+</div>
+<p class="status" id="status" role="status" aria-live="polite"></p>
+</div>
+<div class="tk-stub">
+<div class="stub-t">Send your request to our office</div>
+<p class="stub-s">We reply with the fare options and the next steps. No payment is taken on this page.</p>
+<div class="barcode" aria-hidden="true"></div>
+<button class="btn btn-orange" type="submit">Email my request</button>
+<button class="btn btn-ghost" type="button" id="tg">Send on Telegram</button>
+</div>
+</form>
+</div>
+<datalist id="places"><option value="Dubai (DXB)"><option value="Paris (CDG)"><option value="Kuala Lumpur (KUL)"><option value="Bangkok (BKK)"><option value="Kathmandu (KTM)"><option value="Santorini (JTR)"><option value="Kyoto via Osaka (KIX)"><option value="Cusco for Machu Picchu (CUZ)"><option value="Colombo (CMB)"><option value="Singapore (SIN)"><option value="Doha (DOH)"><option value="Istanbul (IST)"></datalist>
+</section>
 
-  <!-- NAV -->
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:28px 0">
-    <a href="#top" style="display:flex;align-items:center;gap:12px;color:#111418">
-      <svg width="34" height="34" viewBox="0 0 34 34" role="img" aria-label="Four Flights paper plane mark">
-        <path d="M3 17 L31 3 L22 31 L16 20 Z" fill="#FF8C1A" stroke="#FF8C1A" stroke-width="1.5" stroke-linejoin="round"></path>
-        <path d="M16 20 L31 3" stroke="#B85E00" stroke-width="1.5" fill="none"></path>
-      </svg>
-      <span style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;letter-spacing:0.28em">FOUR FLIGHTS</span>
-    </a>
-    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:28px">
-      <a class="nav-link" href="#services" style="color:#111418;font-weight:500;font-size:15px">Services</a>
-      <a class="nav-link" href="#how" style="color:#111418;font-weight:500;font-size:15px">How it works</a>
-      <a class="nav-link" href="#contact" style="color:#111418;font-weight:500;font-size:15px">Contact</a>
-      <a class="btn-dark" href="tel:+9609472945" style="background:#1E5AA8;color:#ffffff;font-weight:700;font-size:15px;padding:12px 24px;border-radius:999px">Call +960 947 2945</a>
-    </div>
-  </div>
-
-  <!-- HERO BODY -->
-  <div id="top" style="display:flex;flex-wrap:wrap;align-items:center;gap:56px;padding:48px 0 88px">
-    <div style="flex:1 1 440px;min-width:0">
-      <div class="eyebrow" style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:#1E5AA8;font-weight:600;margin-bottom:24px">Travels &amp; Tours · Kulhudhuffushi</div>
-      <h1 class="serif" style="margin:0;font-weight:500;font-size:76px;line-height:1.02;letter-spacing:-0.01em">Keep moving <em style="font-weight:600;color:#1E5AA8">forward.</em></h1>
-      <div style="width:48px;height:1px;background:#111418;margin:28px 0"></div>
-      <p style="margin:0 0 36px;font-size:19px;line-height:1.6;color:#0F2A4A;max-width:500px">Flight tickets, tour packages and travel bookings from a local team in the north of the Maldives. You pick the destination, we handle the rest.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:14px">
-        <a class="btn-dark" href="tel:+9609472945" style="background:#1E5AA8;color:#ffffff;font-weight:600;font-size:13px;letter-spacing:0.18em;padding:18px 32px;border-radius:999px">CALL US NOW &nbsp;→</a>
-        <a class="btn-light" href="mailto:admin@4flyts.com" style="color:#111418;font-weight:600;font-size:13px;letter-spacing:0.18em;padding:16px 30px;border-radius:999px;border:1px solid #111418">SEND AN EMAIL &nbsp;→</a>
-        <a class="btn-light" href="https://t.me/FourFlyts" target="_blank" rel="noopener" style="color:#111418;font-weight:600;font-size:13px;letter-spacing:0.18em;padding:16px 30px;border-radius:999px;border:1px solid #111418">TELEGRAM &nbsp;→</a>
-      </div>
-    </div>
-  </div>
+<div class="strip">
+<span>Local office in Kulhudhuffushi, Maldives</span>
+<a href="tel:+9609472945">+960 947 2945</a>
+<a href="mailto:admin@4flyts.com">admin@4flyts.com</a>
+<a href="https://t.me/FourFlyts" target="_blank" rel="noopener">Telegram @FourFlyts</a>
 </div>
 
-<!-- TICKER -->
-<div style="border-top:1px solid rgba(17,20,24,0.18);border-bottom:1px solid rgba(17,20,24,0.18);padding:22px 24px;margin-top:8px">
-  <div class="marquee serif" style="font-size:26px;font-style:italic;color:#0F2A4A"><div class="marquee-track"><span>Flight tickets</span><span style="color:#FF8C1A;font-style:normal">◆</span><span>Tour packages</span><span style="color:#FF8C1A;font-style:normal">◆</span><span>Hotels &amp; stays</span><span style="color:#FF8C1A;font-style:normal">◆</span><span>Travel paperwork</span><span style="color:#FF8C1A;font-style:normal">◆</span><span>Keep moving forward</span><span style="color:#FF8C1A;font-style:normal">◆</span><span>Flight tickets</span><span style="color:#FF8C1A;font-style:normal">◆</span><span>Tour packages</span><span style="color:#FF8C1A;font-style:normal">◆</span><span>Hotels &amp; stays</span><span style="color:#FF8C1A;font-style:normal">◆</span><span>Travel paperwork</span><span style="color:#FF8C1A;font-style:normal">◆</span><span>Keep moving forward</span><span style="color:#FF8C1A;font-style:normal">◆</span></div></div>
+<section class="sec" id="routes" aria-labelledby="routes-h">
+<h2 id="routes-h">Popular trips from Malé</h2>
+<p class="lead">Pick a destination and we fill in the form for you. Fares change daily, so we send a current quote each time.</p>
+<div class="routes">
+<div class="route-w"><button class="route" type="button" data-to="Maldives islands" aria-label="Get a quote for Maldives">
+<span class="route-ph"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261016_132412_cdd9b3ab-701e-4291-b9fd-3875cbd77ce9.png" alt="Turquoise lagoon and overwater villas in the Maldives" loading="lazy" width="1168" height="880"></span>
+<span class="route-b"><span class="route-city">Maldives</span><span class="route-co">Island getaways and domestic flights</span><span class="route-line"><span>Within the Maldives</span><i></i><svg width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="currentColor"/></svg><i></i></span><span class="route-cta">Get a quote</span></span>
+</button></div>
+<div class="route-w"><button class="route" type="button" data-to="Paris (CDG)" aria-label="Get a quote for Paris">
+<span class="route-ph"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261016_132412_9802c195-eac3-4014-a5ab-d972b0581b2d.png" alt="The Eiffel Tower over Paris at golden hour" loading="lazy" width="1168" height="880"></span>
+<span class="route-b"><span class="route-city">Paris</span><span class="route-co">France</span><span class="route-line"><span>MLE</span><i></i><svg width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="currentColor"/></svg><i></i><span>CDG</span></span><span class="route-cta">Get a quote</span></span>
+</button></div>
+<div class="route-w"><button class="route" type="button" data-to="Dubai (DXB)" aria-label="Get a quote for Dubai">
+<span class="route-ph"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261017_084903_d6ed8473-b9ab-4d53-8e02-e0f513324201.png" alt="Dubai skyline with the Burj Khalifa at golden hour" loading="lazy" width="1168" height="880"></span>
+<span class="route-b"><span class="route-city">Dubai</span><span class="route-co">United Arab Emirates</span><span class="route-line"><span>MLE</span><i></i><svg width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="currentColor"/></svg><i></i><span>DXB</span></span><span class="route-cta">Get a quote</span></span>
+</button></div>
+<div class="route-w"><button class="route" type="button" data-to="Kuala Lumpur (KUL)" aria-label="Get a quote for Kuala Lumpur">
+<span class="route-ph"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261017_085433_adf8da2f-086e-4e4d-9075-e3eaab74d3ad.png" alt="Petronas Twin Towers in Kuala Lumpur at dusk" loading="lazy" width="1168" height="880"></span>
+<span class="route-b"><span class="route-city">Kuala Lumpur</span><span class="route-co">Malaysia</span><span class="route-line"><span>MLE</span><i></i><svg width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="currentColor"/></svg><i></i><span>KUL</span></span><span class="route-cta">Get a quote</span></span>
+</button></div>
+<div class="route-w"><button class="route" type="button" data-to="Bangkok (BKK)" aria-label="Get a quote for Bangkok">
+<span class="route-ph"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261017_085433_e2c7a0be-621e-463b-bb10-57f8120ddca8.png" alt="Wat Arun temple beside the river in Bangkok at sunset" loading="lazy" width="1168" height="880"></span>
+<span class="route-b"><span class="route-city">Bangkok</span><span class="route-co">Thailand</span><span class="route-line"><span>MLE</span><i></i><svg width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="currentColor"/></svg><i></i><span>BKK</span></span><span class="route-cta">Get a quote</span></span>
+</button></div>
+<div class="route-w"><button class="route" type="button" data-to="Kathmandu (KTM)" aria-label="Get a quote for Kathmandu">
+<span class="route-ph"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261017_085433_0835c0d6-5989-4f47-b69e-f976566f957b.png" alt="Boudhanath stupa in Kathmandu with Himalayan peaks" loading="lazy" width="1168" height="880"></span>
+<span class="route-b"><span class="route-city">Kathmandu</span><span class="route-co">Nepal</span><span class="route-line"><span>MLE</span><i></i><svg width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="currentColor"/></svg><i></i><span>KTM</span></span><span class="route-cta">Get a quote</span></span>
+</button></div>
+<div class="route-w"><button class="route" type="button" data-to="Santorini (JTR)" aria-label="Get a quote for Santorini">
+<span class="route-ph"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261016_132413_84e8126c-742d-43da-b386-9bf8556a23f5.png" alt="White buildings and blue domes above the sea in Santorini" loading="lazy" width="1168" height="880"></span>
+<span class="route-b"><span class="route-city">Santorini</span><span class="route-co">Greece</span><span class="route-line"><span>MLE</span><i></i><svg width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="currentColor"/></svg><i></i><span>JTR</span></span><span class="route-cta">Get a quote</span></span>
+</button></div>
+<div class="route-w"><button class="route" type="button" data-to="Kyoto via Osaka (KIX)" aria-label="Get a quote for Kyoto">
+<span class="route-ph"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261016_132411_37c93e39-6ceb-4375-a31e-3e295164c4fb.png" alt="Red torii gates in a forest in Kyoto" loading="lazy" width="1168" height="880"></span>
+<span class="route-b"><span class="route-city">Kyoto</span><span class="route-co">Japan, via Osaka</span><span class="route-line"><span>MLE</span><i></i><svg width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="currentColor"/></svg><i></i><span>KIX</span></span><span class="route-cta">Get a quote</span></span>
+</button></div>
+<div class="route-w"><button class="route" type="button" data-to="Cusco for Machu Picchu (CUZ)" aria-label="Get a quote for Machu Picchu">
+<span class="route-ph"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261017_084903_d85869a3-b72a-455f-bf91-abdae0cd4831.png" alt="Machu Picchu ruins at sunrise with a llama in the foreground" loading="lazy" width="1168" height="880"></span>
+<span class="route-b"><span class="route-city">Machu Picchu</span><span class="route-co">Peru, via Cusco</span><span class="route-line"><span>MLE</span><i></i><svg width="20" height="20" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="currentColor"/></svg><i></i><span>CUZ</span></span><span class="route-cta">Get a quote</span></span>
+</button></div>
+</div>
+</section>
+
+<section class="sec" id="services" aria-labelledby="svc-h">
+<div class="svc">
+<div>
+<h2 id="svc-h">One office for the whole trip</h2>
+<p class="lead">Flights are the start. We also arrange the stay, the tour and the paperwork, so you deal with one team from the first call to landing.</p>
+</div>
+<ul class="svc-list">
+<li><svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22 L39 5 L28 39 L21 27 Z"/><path d="M21 27 L39 5"/></svg><div><h3>Flight tickets</h3><p>Domestic and international flights, booked for you with the fare shown clearly before you decide.</p></div></li>
+<li><svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="22" cy="22" r="16"/><path d="M6 22 H38 M22 6 C 14 14 14 30 22 38 C 30 30 30 14 22 6"/></svg><div><h3>Tour packages</h3><p>Trips planned around your dates, budget and group, from family holidays to island getaways.</p></div></li>
+<li><svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 36 V16 L22 6 L38 16 V36 Z"/><path d="M17 36 V24 H27 V36"/></svg><div><h3>Hotels and stays</h3><p>Hotels, guesthouses and resorts reserved to match where you are going and how you like to stay.</p></div></li>
+<li><svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="6" width="26" height="32" rx="3"/><path d="M15 16 H29 M15 23 H29 M15 30 H23"/></svg><div><h3>Travel paperwork</h3><p>Itineraries, vouchers and booking confirmations, ready before you leave.</p></div></li>
+</ul>
+</div>
+</section>
+
+<section class="sec" id="how" aria-labelledby="how-h">
+<h2 id="how-h">How booking works</h2>
+<ol class="steps">
+<li><div class="dot">1</div><h3>Tell us the trip</h3><p>Fill in the form above, or call or message us with your destination, dates and travellers.</p></li>
+<li><div class="dot">2</div><h3>Choose your fare</h3><p>We send flight and stay options with a clear quote. You pick the one that suits you.</p></li>
+<li><div class="dot"><svg width="24" height="24" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 17 L31 3 L22 31 L16 20 Z" fill="#111418"/></svg></div><h3>Get your ticket and fly</h3><p>Confirm, receive your ticket and vouchers, and enjoy the journey.</p></li>
+</ol>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="ct-h">
+<div class="ticket-wrap" style="animation:none">
+<div class="ticket contact-t">
+<div class="tk-main ct-main">
+<h2 id="ct-h">Prefer to talk it through?</h2>
+<p>Call, email or message us. We will go through the options with you.</p>
+<ul class="ct-list">
+<li><a href="mailto:admin@4flyts.com"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="3"/><path d="M4 9 L16 18 L28 9"/></svg><div><small>Email</small><span>admin@4flyts.com</span></div></a></li>
+<li><a href="https://t.me/FourFlyts" target="_blank" rel="noopener"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M28 5 L4 14.5 L11.5 17.5 L14 26 L18 20.5 L24 25 Z"/><path d="M11.5 17.5 L28 5"/></svg><div><small>Telegram</small><span>@FourFlyts</span></div></a></li>
+<li><div><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 29 C 8 20 6 16 6 12 C 6 7 10 3 16 3 C 22 3 26 7 26 12 C 26 16 24 20 16 29 Z"/><circle cx="16" cy="12" r="4"/></svg><div><small>Find us</small><span>Ilaa, Hdh. Kulhudhuffushi, Maldives</span></div></div></li>
+</ul>
+</div>
+<div class="tk-stub">
+<div class="stub-t">Call the office</div>
+<div class="barcode" aria-hidden="true"></div>
+<a class="btn btn-orange" href="tel:+9609472945" style="font-size:18px;padding:16px 12px">+960 947 2945</a>
+</div>
+</div>
+</div>
+</section>
 </div>
 
-<!-- DESTINATIONS -->
-<div style="max-width:1200px;margin:0 auto;padding:72px 24px 16px;box-sizing:border-box">
-  <div class="eyebrow" style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:#1E5AA8;font-weight:600;margin-bottom:14px">Destinations</div>
-  <h2 class="serif" style="margin:0 0 36px;font-weight:500;font-size:52px;line-height:1.08;letter-spacing:-0.01em;max-width:700px">Where will you fly <em style="font-weight:600;color:#1E5AA8">next?</em></h2>
-  <div class="dest-grid">
-<a class="dest reveal" href="tel:+9609472945" style="animation-delay:0.0s"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261016_132412_cdd9b3ab-701e-4291-b9fd-3875cbd77ce9.png" alt="Turquoise lagoon and overwater villas in the Maldives" loading="lazy"><span class="dest-shade"></span><span class="dest-label"><span class="serif" style="font-size:30px;font-weight:500">Maldives</span><span class="dest-go">ASK US →</span></span></a>
-<a class="dest reveal" href="tel:+9609472945" style="animation-delay:0.08s"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261016_132412_9802c195-eac3-4014-a5ab-d972b0581b2d.png" alt="The Eiffel Tower over Paris at golden hour" loading="lazy"><span class="dest-shade"></span><span class="dest-label"><span class="serif" style="font-size:30px;font-weight:500">Paris</span><span class="dest-go">ASK US →</span></span></a>
-<a class="dest reveal" href="tel:+9609472945" style="animation-delay:0.16s"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261016_132411_37c93e39-6ceb-4375-a31e-3e295164c4fb.png" alt="Red torii gates in a forest in Kyoto" loading="lazy"><span class="dest-shade"></span><span class="dest-label"><span class="serif" style="font-size:30px;font-weight:500">Kyoto</span><span class="dest-go">ASK US →</span></span></a>
-<a class="dest reveal" href="tel:+9609472945" style="animation-delay:0.24s"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261016_132413_84e8126c-742d-43da-b386-9bf8556a23f5.png" alt="White buildings and blue domes above the sea in Santorini" loading="lazy"><span class="dest-shade"></span><span class="dest-label"><span class="serif" style="font-size:30px;font-weight:500">Santorini</span><span class="dest-go">ASK US →</span></span></a>
-<a class="dest reveal" href="tel:+9609472945" style="animation-delay:0.40s"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261017_084903_d6ed8473-b9ab-4d53-8e02-e0f513324201.png" alt="Dubai skyline with the Burj Khalifa at golden hour" loading="lazy"><span class="dest-shade"></span><span class="dest-label"><span class="serif" style="font-size:30px;font-weight:500">Dubai</span><span class="dest-go">ASK US →</span></span></a>
-<a class="dest reveal" href="tel:+9609472945" style="animation-delay:0.48s"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261017_084903_d85869a3-b72a-455f-bf91-abdae0cd4831.png" alt="Machu Picchu ruins at sunrise with a llama in the foreground" loading="lazy"><span class="dest-shade"></span><span class="dest-label"><span class="serif" style="font-size:30px;font-weight:500">Machu Picchu</span><span class="dest-go">ASK US →</span></span></a>
-<a class="dest reveal" href="tel:+9609472945" style="animation-delay:0.56s"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261017_085433_adf8da2f-086e-4e4d-9075-e3eaab74d3ad.png" alt="Petronas Twin Towers in Kuala Lumpur at dusk" loading="lazy"><span class="dest-shade"></span><span class="dest-label"><span class="serif" style="font-size:30px;font-weight:500">Kuala Lumpur</span><span class="dest-go">ASK US →</span></span></a>
-<a class="dest reveal" href="tel:+9609472945" style="animation-delay:0.64s"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261017_085433_e2c7a0be-621e-463b-bb10-57f8120ddca8.png" alt="Wat Arun temple beside the river in Bangkok at sunset" loading="lazy"><span class="dest-shade"></span><span class="dest-label"><span class="serif" style="font-size:30px;font-weight:500">Bangkok</span><span class="dest-go">ASK US →</span></span></a>
-<a class="dest reveal" href="tel:+9609472945" style="animation-delay:0.72s"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3AF4ZuMjsUvrHKFW44dBq0r3R6X/hf_20261017_085433_0835c0d6-5989-4f47-b69e-f976566f957b.png" alt="Boudhanath stupa in Kathmandu with Himalayan peaks" loading="lazy"><span class="dest-shade"></span><span class="dest-label"><span class="serif" style="font-size:30px;font-weight:500">Kathmandu</span><span class="dest-go">ASK US →</span></span></a>
-  </div>
+<footer class="foot">
+<div class="wrap">
+<b>FOUR FLIGHTS</b>
+<span>Keep moving forward</span>
+<span>Hdh. Kulhudhuffushi, Maldives · 4flyts.com</span>
+<span><a href="/privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms of Service</a></span>
 </div>
-
-<!-- SERVICES -->
-<div id="services" style="max-width:1200px;margin:0 auto;padding:40px 24px 24px;box-sizing:border-box">
-  <div class="eyebrow" style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:#1E5AA8;font-weight:600;margin-bottom:14px">What we do</div>
-  <h2 class="serif" style="margin:0 0 12px;font-weight:500;font-size:52px;line-height:1.08;letter-spacing:-0.01em;max-width:700px">Everything for the trip</h2>
-  <div style="width:48px;height:1px;background:#111418;margin:0 0 40px"></div>
-  <div style="display:flex;flex-wrap:wrap;gap:20px">
-    <div class="lift reveal" style="flex:1 1 250px;min-width:0;background:#ffffff;border-radius:24px;transition:transform .35s;padding:32px 28px;box-sizing:border-box;box-shadow:0 14px 30px rgba(30,90,168,0.12)">
-      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22 L39 5 L28 39 L21 27 Z"></path><path d="M21 27 L39 5"></path></svg>
-      <h3 style="margin:20px 0 10px;font-family:'Montserrat',sans-serif;font-size:17px;letter-spacing:0.08em;text-transform:uppercase">Flight tickets</h3>
-      <p style="margin:0;font-size:16px;line-height:1.6;color:#2A4468">Domestic and international flights booked for you, with clear fares and no guesswork.</p>
-    </div>
-    <div class="lift reveal" style="flex:1 1 250px;min-width:0;background:#ffffff;border-radius:24px;transition:transform .35s;padding:32px 28px;box-sizing:border-box;box-shadow:0 14px 30px rgba(30,90,168,0.12)">
-      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="22" cy="22" r="16"></circle><path d="M6 22 H38 M22 6 C 14 14 14 30 22 38 C 30 30 30 14 22 6"></path></svg>
-      <h3 style="margin:20px 0 10px;font-family:'Montserrat',sans-serif;font-size:17px;letter-spacing:0.08em;text-transform:uppercase">Tour packages</h3>
-      <p style="margin:0;font-size:16px;line-height:1.6;color:#2A4468">Trips planned around your dates, budget and group, from family holidays to island getaways.</p>
-    </div>
-    <div class="lift reveal" style="flex:1 1 250px;min-width:0;background:#ffffff;border-radius:24px;transition:transform .35s;padding:32px 28px;box-sizing:border-box;box-shadow:0 14px 30px rgba(30,90,168,0.12)">
-      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 36 V16 L22 6 L38 16 V36 Z"></path><path d="M17 36 V24 H27 V36"></path></svg>
-      <h3 style="margin:20px 0 10px;font-family:'Montserrat',sans-serif;font-size:17px;letter-spacing:0.08em;text-transform:uppercase">Hotels &amp; stays</h3>
-      <p style="margin:0;font-size:16px;line-height:1.6;color:#2A4468">Hotels, guesthouses and resorts reserved to match where you are going and how you like to stay.</p>
-    </div>
-    <div class="lift reveal" style="flex:1 1 250px;min-width:0;background:#ffffff;border-radius:24px;transition:transform .35s;padding:32px 28px;box-sizing:border-box;box-shadow:0 14px 30px rgba(30,90,168,0.12)">
-      <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="6" width="26" height="32" rx="3"></rect><path d="M15 16 H29 M15 23 H29 M15 30 H23"></path></svg>
-      <h3 style="margin:20px 0 10px;font-family:'Montserrat',sans-serif;font-size:17px;letter-spacing:0.08em;text-transform:uppercase">Travel paperwork</h3>
-      <p style="margin:0;font-size:16px;line-height:1.6;color:#2A4468">Help with itineraries, vouchers and booking confirmations so everything is ready before you leave.</p>
-    </div>
-  </div>
-</div>
-
-<!-- HOW IT WORKS -->
-<div id="how" style="max-width:1200px;margin:0 auto;padding:72px 24px 24px;box-sizing:border-box">
-  <div class="eyebrow" style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:#1E5AA8;font-weight:600;margin-bottom:14px">How it works</div>
-  <h2 class="serif" style="margin:0 0 12px;font-weight:500;font-size:52px;line-height:1.08;letter-spacing:-0.01em;max-width:700px">Three steps to take off</h2>
-  <div style="width:48px;height:1px;background:#111418;margin:0 0 40px"></div>
-  <div style="display:flex;flex-wrap:wrap;gap:36px">
-    <div style="flex:1 1 260px;min-width:0;border-top:4px dashed #ffffff;padding-top:28px">
-      <div style="display:flex;align-items:center;gap:14px">
-        <div style="width:48px;height:48px;border-radius:999px;background:#FF8C1A;color:#111418;font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(30,90,168,0.2)">1</div>
-        <h3 style="margin:0;font-family:'Montserrat',sans-serif;font-size:17px;letter-spacing:0.08em;text-transform:uppercase">Tell us where</h3>
-      </div>
-      <p style="margin:16px 0 0;font-size:16px;line-height:1.6;color:#0F2A4A">Call or email with your destination, dates and number of travellers.</p>
-    </div>
-    <div style="flex:1 1 260px;min-width:0;border-top:4px dashed #ffffff;padding-top:28px">
-      <div style="display:flex;align-items:center;gap:14px">
-        <div style="width:48px;height:48px;border-radius:999px;background:#FF8C1A;color:#111418;font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(30,90,168,0.2)">2</div>
-        <h3 style="margin:0;font-family:'Montserrat',sans-serif;font-size:17px;letter-spacing:0.08em;text-transform:uppercase">We plan it</h3>
-      </div>
-      <p style="margin:16px 0 0;font-size:16px;line-height:1.6;color:#0F2A4A">We put together flight and stay options and send you a clear quote to choose from.</p>
-    </div>
-    <div style="flex:1 1 260px;min-width:0;border-top:4px dashed #ffffff;padding-top:28px">
-      <div style="display:flex;align-items:center;gap:14px">
-        <div style="width:48px;height:48px;border-radius:999px;background:#FF8C1A;color:#111418;font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(30,90,168,0.2)">3</div>
-        <h3 style="margin:0;font-family:'Montserrat',sans-serif;font-size:17px;letter-spacing:0.08em;text-transform:uppercase">You fly</h3>
-      </div>
-      <p style="margin:16px 0 0;font-size:16px;line-height:1.6;color:#0F2A4A">Confirm, receive your vouchers and tickets, and enjoy the trip.</p>
-    </div>
-  </div>
-</div>
-
-<!-- CONTACT -->
-<div id="contact" style="max-width:1200px;margin:0 auto;padding:80px 24px 80px;box-sizing:border-box">
-  <div style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
-    <div style="flex:1 1 420px;min-width:0">
-      <div class="eyebrow" style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:#1E5AA8;font-weight:600;margin-bottom:14px">Contact</div>
-      <h2 class="serif" style="margin:0 0 12px;font-weight:500;font-size:52px;line-height:1.08;letter-spacing:-0.01em;max-width:700px">Ready to go somewhere?</h2>
-      <div style="width:48px;height:1px;background:#111418;margin:0 0 24px"></div>
-      <p style="margin:0;font-size:18px;line-height:1.6;color:#0F2A4A;max-width:480px">Reach out and we will get back to you with options for your trip.</p>
-    </div>
-    <div style="flex:1 1 380px;min-width:0;display:flex;flex-direction:column;gap:16px">
-      <a class="btn-dark" href="tel:+9609472945" style="display:flex;align-items:center;gap:18px;background:#1E5AA8;color:#ffffff;border-radius:24px;padding:24px 28px">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5 H13 L15 12 L12 14 C 14 18 16 20 20 22 L22 19 L28 21 V26 C 28 27 27 28 26 28 C 15 28 4 17 4 8 C 4 6 6 5 8 5 Z"></path></svg>
-        <span style="display:flex;flex-direction:column"><span style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;font-weight:600">Call or message</span><span style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:26px;letter-spacing:0.06em">+960 947 2945</span></span>
-      </a>
-      <a href="mailto:admin@4flyts.com" style="display:flex;align-items:center;gap:18px;background:#ffffff;color:#111418;border-radius:24px;padding:24px 28px;box-shadow:0 14px 30px rgba(30,90,168,0.12)">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="3"></rect><path d="M4 9 L16 18 L28 9"></path></svg>
-        <span style="display:flex;flex-direction:column;min-width:0"><span style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;color:#1E5AA8">Email</span><span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:18px;overflow-wrap:anywhere">admin@4flyts.com</span></span>
-      </a>
-      <a href="https://t.me/FourFlyts" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:18px;background:#ffffff;color:#111418;border-radius:24px;padding:24px 28px;box-shadow:0 14px 30px rgba(30,90,168,0.12)">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M28 5 L4 14.5 L11.5 17.5 L14 26 L18 20.5 L24 25 Z"></path><path d="M11.5 17.5 L28 5"></path></svg>
-        <span style="display:flex;flex-direction:column;min-width:0"><span style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;color:#1E5AA8">Telegram</span><span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:18px">Message us on Telegram</span></span>
-      </a>
-      <div style="display:flex;align-items:center;gap:18px;background:#ffffff;color:#111418;border-radius:24px;padding:24px 28px;box-shadow:0 14px 30px rgba(30,90,168,0.12)">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#1E5AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 29 C 8 20 6 16 6 12 C 6 7 10 3 16 3 C 22 3 26 7 26 12 C 26 16 24 20 16 29 Z"></path><circle cx="16" cy="12" r="4"></circle></svg>
-        <span style="display:flex;flex-direction:column"><span style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;font-weight:600;color:#1E5AA8">Find us</span><span style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:18px">Ilaa, Hdh. Kulhudhuffushi, Maldives</span></span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<div style="background:#111418;color:#C9D4E5;border-top:4px solid #FF8C1A">
-  <div style="max-width:1200px;margin:0 auto;padding:36px 24px;box-sizing:border-box;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;font-size:14px">
-    <span style="font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:0.28em;color:#ffffff">FOUR FLIGHTS</span>
-    <span style="font-family:'Montserrat',sans-serif;letter-spacing:0.22em;text-transform:uppercase;font-size:12px">Keep moving forward</span>
-    <span>Hdh. Kulhudhuffushi, Maldives · 4flyts.com</span>
-    <span><a href="/privacy.html" style="color:#C9D4E5;text-decoration:underline">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:#C9D4E5;text-decoration:underline">Terms of Service</a></span>
-  </div>
-</div>
-
-</div>
-
-
-</body>
-</html>
+</footer>
 
 <script>
 (function(){
-  if(!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
-  var d=document.createElement('div'),r=document.createElement('div');
-  d.className='cur-dot';r.className='cur-ring';document.body.append(d,r);
-  document.body.classList.add('has-cursor');
-  var x=0,y=0,rx=0,ry=0;
-  addEventListener('mousemove',function(e){x=e.clientX;y=e.clientY;document.body.classList.add('cur-on');
-    d.style.transform='translate('+x+'px,'+y+'px)';});
-  document.addEventListener('mouseleave',function(){document.body.classList.remove('cur-on')});
-  (function loop(){rx+=(x-rx)*.16;ry+=(y-ry)*.16;r.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(loop)})();
-  document.addEventListener('mouseover',function(e){r.classList.toggle('big',!!e.target.closest('a,button'))});
-  document.querySelectorAll('.dest').forEach(function(c){
-    c.addEventListener('mousemove',function(e){var b=c.getBoundingClientRect(),px=(e.clientX-b.left)/b.width-.5,py=(e.clientY-b.top)/b.height-.5;
-      c.style.transform='perspective(800px) rotateY('+px*10+'deg) rotateX('+(-py*10)+'deg) translateY(-6px)'});
-    c.addEventListener('mouseleave',function(){c.style.transform=''});
-  });
+var $=function(s){return document.querySelector(s)};
+var from=$('#from'),to=$('#to'),dep=$('#dep'),ret=$('#ret'),st=$('#status');
+// dates: no past days, return after leaving
+var t=new Date();t.setMinutes(t.getMinutes()-t.getTimezoneOffset());
+var today=t.toISOString().slice(0,10);dep.min=today;ret.min=today;
+dep.addEventListener('change',function(){ret.min=dep.value||today;if(ret.value&&ret.value<ret.min)ret.value=''});
+$('#swap').addEventListener('click',function(){var v=from.value;from.value=to.value;to.value=v});
+function say(m,err){st.textContent=m;st.className='status'+(err?' err':'')}
+function build(){
+var svc=(document.querySelector('input[name=svc]:checked')||{}).value||'Flight ticket';
+var L=['Hello Four Flights, I would like a quote.','','Service: '+svc,'From: '+from.value.trim(),'To: '+to.value.trim()];
+if(dep.value)L.push('Leaving: '+dep.value);
+if(ret.value)L.push('Returning: '+ret.value);
+L.push('Travellers: '+$('#pax').value);
+if($('#nm').value.trim())L.push('Name: '+$('#nm').value.trim());
+if($('#ct').value.trim())L.push('Phone or Telegram: '+$('#ct').value.trim());
+return {svc:svc,text:L.join('\n')};
+}
+function ok(){if(!to.value.trim()){say('Add where you want to go, then send your request.',true);to.focus();return false}return true}
+$('#tf').addEventListener('submit',function(e){
+e.preventDefault();if(!ok())return;
+var b=build();
+say('Opening your email app with the request filled in. Press send there to finish.');
+location.href='mailto:admin@4flyts.com?subject='+encodeURIComponent(b.svc+' request: '+to.value.trim())+'&body='+encodeURIComponent(b.text);
+});
+$('#tg').addEventListener('click',function(){
+if(!ok())return;var b=build();
+var go=function(msg){say(msg);window.open('https://t.me/FourFlyts','_blank','noopener')};
+if(navigator.clipboard&&navigator.clipboard.writeText){
+navigator.clipboard.writeText(b.text).then(function(){go('Request copied. Paste it into the Telegram chat and send.')},function(){go('Telegram is opening. Please type your trip details in the chat.')});
+}else go('Telegram is opening. Please type your trip details in the chat.');
+});
+document.querySelectorAll('.route').forEach(function(r){
+r.addEventListener('click',function(){
+to.value=r.getAttribute('data-to');say('Destination set to '+to.value+'. Add your dates and send the request.');
+document.getElementById('book').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'center'});
+setTimeout(function(){dep.focus({preventScroll:true})},500);
+});
+});
+// custom cursor + card tilt (mouse only)
+if(!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+var d=document.createElement('div'),r=document.createElement('div');
+d.className='cur-dot';r.className='cur-ring';document.body.append(d,r);
+document.body.classList.add('has-cursor');
+var x=0,y=0,rx=0,ry=0;
+addEventListener('mousemove',function(e){x=e.clientX;y=e.clientY;document.body.classList.add('cur-on');d.style.transform='translate('+x+'px,'+y+'px)'});
+document.addEventListener('mouseleave',function(){document.body.classList.remove('cur-on')});
+(function loop(){rx+=(x-rx)*.16;ry+=(y-ry)*.16;r.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(loop)})();
+document.addEventListener('mouseover',function(e){r.classList.toggle('big',!!e.target.closest('a,button'))});
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+document.querySelectorAll('.route-w').forEach(function(c){
+c.addEventListener('mousemove',function(e){var b=c.getBoundingClientRect(),px=(e.clientX-b.left)/b.width-.5,py=(e.clientY-b.top)/b.height-.5;
+c.style.transform='perspective(800px) rotateY('+px*9+'deg) rotateX('+(-py*9)+'deg) translateY(-6px)'});
+c.addEventListener('mouseleave',function(){c.style.transform=''});
+});
 })();
 </script>
 </body>
